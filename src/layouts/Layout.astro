@@ -76,20 +76,19 @@ const {
 		<link rel="shortcut icon" href="/assets/images/brand-logo.svg">
 		<link rel="apple-touch-icon" href="/assets/images/pwa/icon-152x152.png">
 		
-		<!-- Fonts & Icons (Non-blocking) -->
+		<!-- Fonts & Icons -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@700;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 		<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@700;900&display=swap" rel="stylesheet"></noscript>
-
-		<link rel="preload" as="style" href="/assets/css/font-awesome.css" onload="this.onload=null;this.rel='stylesheet'">
-		<noscript><link rel="stylesheet" href="/assets/css/font-awesome.css"></noscript>
 		
-		<!-- Animation CSS (Non-blocking) -->
+		<!-- Fix missing local webfonts by using CDN -->
+		<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+		
+		<!-- Animation CSS -->
 		<link rel="preload" as="style" href="/assets/css/aos.css" onload="this.onload=null;this.rel='stylesheet'">
 		<noscript><link href="/assets/css/aos.css" rel="stylesheet"></noscript>
-
-
 
 		<script is:inline>
 			// Check if running as PWA (standalone mode)
@@ -110,7 +109,7 @@ const {
 
 		<slot />
 		
-		<!-- Scripts (Non-blocking, loaded at end of body) -->
+		<!-- Scripts (Non-blocking) -->
 		<script is:inline src="/assets/js/jquery.js"></script>
 		<script is:inline src="/assets/js/aos.js"></script>
 
