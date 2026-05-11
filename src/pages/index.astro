@@ -13,7 +13,7 @@ import Pricing from '../components/sections/Pricing.astro';
 
 <Layout title="Jaripos - Aplikasi Kasir UMKM Masakini">
     <!-- Main Content Wrapper for Footer Reveal Effect -->
-    <main class="relative z-10 bg-white shadow-2xl mb-[65vh]">
+    <main class="relative z-10 bg-white shadow-2xl">
 
         <Navbar />
 
@@ -103,15 +103,7 @@ import Pricing from '../components/sections/Pricing.astro';
                 }
             });
 
-            $('a[href^="#"]').on('click', function(event) {
-                var target = $(this.getAttribute('href'));
-                if( target.length ) {
-                    event.preventDefault();
-                    $('html, body').stop().animate({
-                        scrollTop: target.offset().top - 80
-                    }, 100, 'easeInOutExpo');
-                }
-            });
+            // Anchor Links Smooth Scrolling handled natively by Layout.astro (scroll-padding-top)
 
             // Video Modal Logic
             const videoSrc = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0"; 
