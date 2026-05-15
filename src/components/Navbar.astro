@@ -1,24 +1,36 @@
 ---
 ---
-<nav id="navbar" class="fixed w-full z-50 transition-colors duration-500 ease-in-out bg-slate-900 border-b border-slate-800">
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-500 ease-in-out bg-transparent border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
+        <div id="navbar-container" class="flex justify-between items-center h-28 transition-all duration-500">
             <!-- Logo -->
-            <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer transition-transform hover:scale-105" onclick="window.scrollTo(0,0)">
-                <div class="w-10 h-10 bg-gradient-to-br from-brand-500 to-brand-600 rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg shadow-brand-500/30">
-                    J
-                </div>
-                <!-- Ensure text is white by default -->
-                <span id="logo-text" class="font-bold text-2xl text-white tracking-tight transition-colors duration-500">Jaripos</span>
+            <div class="flex-shrink-0 flex items-center cursor-pointer transition-transform hover:scale-105" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <img src="/JARI-BLACK.png" alt="Jaripos Logo" class="h-8 md:h-10 w-auto logo-black transition-opacity duration-500" />
+                <img src="/JARI-WHITE.png" alt="Jaripos Logo" class="h-8 md:h-10 w-auto logo-white hidden transition-opacity duration-500" />
             </div>
+
+            <style>
+                /* When NOT scrolled (Idle/Top - Light Background) */
+                #navbar:not(.nav-scrolled) .logo-white { display: none; }
+                #navbar:not(.nav-scrolled) .logo-black { display: block; }
+                
+                /* When scrolled (Dark Background - Footer Color) */
+                #navbar.nav-scrolled .logo-white { display: block; }
+                #navbar.nav-scrolled .logo-black { display: none; }
+                
+                /* Dynamic theme overrides for dark sections if any */
+                #navbar.nav-dark .logo-black { display: none; }
+                #navbar.nav-dark .logo-white { display: block; }
+            </style>
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 items-center">
-                <a href="#comparison" class="nav-link text-slate-300 hover:text-white font-medium transition duration-300 hover:-translate-y-0.5">Solusi Digital</a>
-                <a href="#target-market" class="nav-link text-slate-300 hover:text-white font-medium transition duration-300 hover:-translate-y-0.5">Target Bisnis</a>
-                <a href="#innovation" class="nav-link text-slate-300 hover:text-white font-medium transition duration-300 hover:-translate-y-0.5">Fitur AI</a>
-                <a href="#pricing" class="nav-link text-slate-300 hover:text-white font-medium transition duration-300 hover:-translate-y-0.5">Harga</a>
-                <a href="https://app.jaripos.com/register" data-track="nav-cta-desktop" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-2.5 font-semibold text-white bg-brand-600 duration-300 hover:bg-brand-700 shadow-lg shadow-brand-500/30">
+                <a href="#comparison" class="nav-link text-slate-900 hover:text-cyan-brand font-medium transition duration-300 hover:-translate-y-0.5">Kenapa Jaripos?</a>
+                <a href="#target-market" class="nav-link text-slate-900 hover:text-cyan-brand font-medium transition duration-300 hover:-translate-y-0.5">Cocok untuk Siapa?</a>
+                <a href="#features" class="nav-link text-slate-900 hover:text-cyan-brand font-medium transition duration-300 hover:-translate-y-0.5">Fitur</a>
+                <a href="#pricing" class="nav-link text-slate-900 hover:text-cyan-brand font-medium transition duration-300 hover:-translate-y-0.5">Harga</a>
+                <a href="https://app.jaripos.com" data-track="nav-login" class="nav-link text-slate-900 hover:text-cyan-brand font-medium transition duration-300 hover:-translate-y-0.5">Masuk</a>
+                <a href="https://app.jaripos.com/register" data-track="nav-cta-desktop" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-2.5 font-semibold text-white bg-cyan-brand duration-300 hover:brightness-110 shadow-lg shadow-cyan-500/20">
                     <div class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
                         <div class="relative h-full w-8 bg-white/20"></div>
                     </div>
@@ -28,7 +40,7 @@
 
             <!-- Mobile Menu Button -->
             <div class="md:hidden flex items-center">
-                <button id="mobile-menu-btn" aria-label="Menu" class="text-slate-300 hover:text-white focus:outline-none p-2 transition-all duration-300">
+                <button id="mobile-menu-btn" aria-label="Menu" class="text-slate-900 hover:text-cyan-brand focus:outline-none p-2 transition-all duration-300">
                     <!-- Hamburger Icon -->
                     <svg id="hamburger-icon" class="h-8 w-8 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -43,13 +55,13 @@
     </div>
     
     <!-- Mobile Menu Panel -->
-    <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-slate-900 border-b border-slate-800 shadow-xl transition-colors duration-500">
+    <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white border-b border-slate-200 shadow-xl transition-colors duration-500">
         <div class="px-4 pt-2 pb-6 space-y-2">
-            <a href="#comparison" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Solusi Digital</a>
-            <a href="#target-market" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Target Bisnis</a>
-            <a href="#innovation" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Fitur AI</a>
-            <a href="#pricing" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Harga</a>
-            <a href="https://app.jaripos.com/register" data-track="nav-cta-mobile" class="block w-full text-center mt-4 px-6 py-3 rounded-lg text-white bg-brand-600 font-bold shadow-md">Coba Gratis Sekarang</a>
+            <a href="#comparison" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-slate-50">Kenapa Jaripos?</a>
+            <a href="#target-market" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-slate-50">Cocok untuk Siapa?</a>
+            <a href="#features" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-slate-50">Fitur</a>
+            <a href="#pricing" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-slate-50">Harga</a>
+            <a href="https://app.jaripos.com/register" data-track="nav-cta-mobile" class="block w-full text-center mt-4 px-6 py-3 rounded-lg text-white bg-cyan-brand font-bold shadow-md">Coba Gratis Sekarang</a>
         </div>
     </div>
 </nav>
@@ -58,37 +70,45 @@
     document.addEventListener('DOMContentLoaded', () => {
         const navbar = document.getElementById('navbar');
         
-        // Explicitly selecting the Dark Sections by ID or Class
-        // We want the navbar to be LIGHT when over these sections
+        // Sections that require a DARK navbar (white text/logo)
         const darkSections = [
             document.getElementById('scalable'),
             document.getElementById('cta')
-        ].filter(el => el !== null); // Filter out nulls just in case
+        ].filter(el => el !== null);
 
         function updateNavbar() {
-            let shouldBeLight = false;
+            const scrollPos = window.scrollY;
             const navbarHeight = 80;
             
-            darkSections.forEach(section => {
-                 const rect = section.getBoundingClientRect();
-                 // If the section overlaps with the top of the viewport (navbar area)
-                 // Logic: Top of section is above navbar bottom, AND Bottom of section is below navbar top
-                 if (rect.top <= navbarHeight && rect.bottom >= navbarHeight * 0.5) {
-                     shouldBeLight = true;
-                 }
-            });
+            // Handle Scroll Background
+            if (scrollPos > 40) {
+                navbar.classList.add('nav-scrolled');
+                navbar.classList.remove('bg-transparent', 'border-white/10');
+                
+                // Update text colors for dark background (scrolled)
+                navbar.querySelectorAll('.nav-link, #mobile-menu-btn').forEach(el => {
+                    el.classList.remove('text-slate-900');
+                    el.classList.add('text-white');
+                });
 
-            if (shouldBeLight) {
-                navbar.classList.add('nav-light');
+                document.getElementById('navbar-container').classList.remove('h-28');
+                document.getElementById('navbar-container').classList.add('h-20');
             } else {
-                navbar.classList.remove('nav-light');
+                navbar.classList.remove('nav-scrolled');
+                navbar.classList.add('bg-transparent', 'border-white/10');
+                
+                // Update text colors for light background (idle)
+                navbar.querySelectorAll('.nav-link, #mobile-menu-btn').forEach(el => {
+                    el.classList.remove('text-white');
+                    el.classList.add('text-slate-900');
+                });
+
+                document.getElementById('navbar-container').classList.remove('h-20');
+                document.getElementById('navbar-container').classList.add('h-28');
             }
         }
         
-        // Listen to scroll
         window.addEventListener('scroll', updateNavbar, { passive: true });
-        
-        // Initial check
         updateNavbar();
 
         // Mobile Menu Toggle
@@ -106,9 +126,11 @@
             }
         });
         
-        // Close mobile menu on link click
         $('#mobile-menu a').click(function() {
             $('#mobile-menu').slideUp();
+            menuOpen = false;
+            $('#hamburger-icon').removeClass('hidden');
+            $('#close-icon').addClass('hidden');
         });
     });
 </script>
