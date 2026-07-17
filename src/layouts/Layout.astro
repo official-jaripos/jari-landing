@@ -18,7 +18,7 @@ const {
 	image = "/assets/images/og-image.png",
 	canonicalURL = new URL(Astro.url.pathname, Astro.url.origin),
 	keywords = "aplikasi kasir, POS umkm, point of sales, kasir online, manajemen stok",
-	gtmId = "GTM-MKQ68QSW"
+	gtmId = "GTM-TZGSJ83F"
 } = Astro.props;
 ---
 
@@ -30,6 +30,9 @@ const {
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<meta name="keywords" content={keywords} />
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="Jaripos" />
+		<meta http-equiv="content-language" content="id" />
 		<link rel="canonical" href={canonicalURL} />
 
 		<!-- Open Graph / Facebook / WhatsApp -->
@@ -61,6 +64,55 @@ const {
 			</script>
 		)}
 		<!-- End Google Tag Manager -->
+
+		<!-- Schema.org Structured Data (JSON-LD) -->
+		<script type="application/ld+json" is:inline>
+		{
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "Organization",
+					"name": "Jaripos",
+					"url": "https://jaripos.com",
+					"logo": "https://jaripos.com/LOGO-JARI-WHITE.png",
+					"email": "official.jaripos@gmail.com",
+					"description": "JariPOS adalah aplikasi kasir (POS) berbasis AI untuk UMKM di Indonesia.",
+					"address": {
+						"@type": "PostalAddress",
+						"addressLocality": "Semarang",
+						"addressRegion": "Jawa Tengah",
+						"addressCountry": "ID"
+					},
+					"sameAs": [
+						"https://www.instagram.com/official.jaripos",
+						"https://www.tiktok.com/@official.jaripos"
+					]
+				},
+				{
+					"@type": "SoftwareApplication",
+					"name": "JARIPOS",
+					"applicationCategory": "BusinessApplication",
+					"applicationSubCategory": "AI-powered Point of Sale (POS)",
+					"operatingSystem": "Web, Android, iOS",
+					"description": "JariPOS adalah aplikasi kasir (POS) berbasis AI untuk UMKM di Indonesia yang membantu mengelola penjualan, stok, pelanggan, dan memberikan insight bisnis secara cerdas.",
+					"url": "https://jaripos.com",
+					"image": "https://jaripos.com/logo.png",
+					"featureList": [
+						"AI Business Assistant",
+						"AI Inventory Management",
+						"AI Sales Analytics",
+						"Point of Sale (POS)",
+						"Inventory Management",
+						"Customer Management",
+						"Multi Outlet",
+						"Digital Payment",
+						"Sales Reporting"
+					]
+				}
+			]
+		}
+		</script>
+		<!-- End Schema.org Structured Data -->
 		
 		<!-- PWA Meta Tags -->
 		<meta name="theme-color" content="#0ea5e9">
@@ -124,5 +176,8 @@ const {
 				});
 			});
 		</script>
+
+		<!-- Analytics Event Tracking (pushes to GTM dataLayer) -->
+		<script is:inline src="/assets/js/analytics.js"></script>
 	</body>
 </html>

@@ -9,7 +9,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jari-landing.vercel.app',
+  site: 'https://jaripos.com',
   vite: {
     plugins: [tailwindcss()]
   },
