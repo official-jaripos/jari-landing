@@ -150,6 +150,9 @@ const {
 				window.location.replace('/login');
 			}
 		</script>
+
+		<!-- Load jQuery first so that page-specific inline scripts can use $ safely -->
+		<script is:inline src="/assets/js/jquery.js"></script>
 	</head>
 	<body class="font-sans text-slate-600 antialiased overflow-x-hidden bg-slate-900">
 		<!-- Google Tag Manager (noscript) -->
@@ -162,7 +165,6 @@ const {
 		<slot />
 		
 		<!-- Scripts (Non-blocking) -->
-		<script is:inline src="/assets/js/jquery.js"></script>
 		<script is:inline src="/assets/js/aos.js"></script>
 
 		<!-- Initialize Global Scripts -->
