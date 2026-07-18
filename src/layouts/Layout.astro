@@ -13,11 +13,11 @@ interface Props {
 
 const { 
 	title, 
-	description = "Jari Pos adalah platform Point of Sales (POS) yang memudahkan pengelolaan transaksi dan operasional bisnis Anda secara efisien dan terintegrasi.",
+	description = "Jaripos adalah platform Point of Sales (POS) yang memudahkan pengelolaan transaksi dan operasional bisnis Anda secara efisien dan terintegrasi.",
 	type = "website",
 	image = "/assets/images/og-image.png",
 	canonicalURL = new URL(Astro.url.pathname, Astro.url.origin),
-	keywords = "aplikasi kasir, POS umkm, point of sales, kasir online, manajemen stok",
+	keywords = "aplikasi kasir, POS umkm, point of sales, kasir online, manajemen stok, jaripos, jari pos",
 	gtmId = "GTM-TZGSJ83F"
 } = Astro.props;
 ---
@@ -71,7 +71,18 @@ const {
 			"@context": "https://schema.org",
 			"@graph": [
 				{
+					"@type": "WebSite",
+					"@id": "https://jaripos.com/#website",
+					"url": "https://jaripos.com/",
+					"name": "Jaripos",
+					"alternateName": ["Jari POS", "JariPos", "Jaripos.com", "JARIPOS"],
+					"publisher": {
+						"@id": "https://jaripos.com/#organization"
+					}
+				},
+				{
 					"@type": "Organization",
+					"@id": "https://jaripos.com/#organization",
 					"name": "Jaripos",
 					"url": "https://jaripos.com",
 					"logo": "https://jaripos.com/LOGO-JARI-WHITE.png",
@@ -90,6 +101,7 @@ const {
 				},
 				{
 					"@type": "SoftwareApplication",
+					"@id": "https://jaripos.com/#software",
 					"name": "JARIPOS",
 					"applicationCategory": "BusinessApplication",
 					"applicationSubCategory": "AI-powered Point of Sale (POS)",
@@ -107,6 +119,52 @@ const {
 						"Multi Outlet",
 						"Digital Payment",
 						"Sales Reporting"
+					],
+					"author": {
+						"@id": "https://jaripos.com/#organization"
+					}
+				},
+				{
+					"@type": "ItemList",
+					"@id": "https://jaripos.com/#navigation",
+					"name": "Menu Navigasi Utama",
+					"itemListElement": [
+						{
+							"@type": "SiteNavigationElement",
+							"position": 1,
+							"name": "Kenapa JARIPOS?",
+							"url": "https://jaripos.com/#comparison"
+						},
+						{
+							"@type": "SiteNavigationElement",
+							"position": 2,
+							"name": "Cocok untuk Siapa?",
+							"url": "https://jaripos.com/#target-market"
+						},
+						{
+							"@type": "SiteNavigationElement",
+							"position": 3,
+							"name": "Fitur",
+							"url": "https://jaripos.com/#features"
+						},
+						{
+							"@type": "SiteNavigationElement",
+							"position": 4,
+							"name": "Harga",
+							"url": "https://jaripos.com/#pricing"
+						},
+						{
+							"@type": "SiteNavigationElement",
+							"position": 5,
+							"name": "Kemitraan Afiliasi",
+							"url": "https://jaripos.com/affiliate"
+						},
+						{
+							"@type": "SiteNavigationElement",
+							"position": 6,
+							"name": "Masuk Aplikasi",
+							"url": "https://app.jaripos.com"
+						}
 					]
 				}
 			]
