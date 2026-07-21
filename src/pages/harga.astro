@@ -1,0 +1,255 @@
+---
+import '../styles/index.css';
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+    title="Daftar Harga & Paket Rencana Jaripos | Aplikasi Kasir Pintar"
+    description="Temukan paket harga Jaripos yang sesuai untuk bisnis Anda. Dari Paket Kelingking gratis selamanya hingga Paket Jempol premium yang murah dengan fitur AI terlengkap."
+    keywords="harga aplikasi kasir, kasir pintar murah, pos gratis, aplikasi kasir umkm, paket langganan jaripos, pos murah indonesia"
+>
+    <Navbar />
+
+    <main class="relative z-10 bg-white text-slate-600 pt-32">
+        <!-- Hero & Header Wrapper with Light Geometric Mesh -->
+        <div class="hero-light-wrapper border-b border-slate-100">
+            <div class="mesh-grid-light"></div>
+            <!-- Hero Section -->
+            <section class="py-20 relative overflow-hidden">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                    <h1 class="text-4xl md:text-6xl font-black tracking-tight text-[#121417] mb-6">
+                        Investasi Minimal, <br/>
+                        <span class="text-[#1f5aa2]">Hasil Maksimal</span>
+                    </h1>
+                    <p class="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+                        Kami percaya setiap bisnis UMKM berhak atas alat kasir digital yang canggih tanpa perlu mengeluarkan biaya jutaan rupiah. Pilih paket yang sesuai dengan skala bisnis Anda.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Pricing Cards Section -->
+        <section class="py-12 bg-slate-50 border-y border-slate-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
+                    
+                    <!-- Free Plan Card -->
+                    <div class="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-300 hover:shadow-xl transition duration-300">
+                        <div>
+                            <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-500 text-xs font-bold uppercase tracking-wider inline-block mb-6">Gratis Selamanya</span>
+                            <h2 class="text-2xl font-black text-slate-900 mb-2">Paket Kelingking</h2>
+                            <p class="text-slate-500 text-sm mb-6">Sangat cocok untuk warung kecil, bisnis rumahan, atau usaha pemula yang baru merintis transaksi digital.</p>
+                            
+                            <div class="flex items-baseline mb-8">
+                                <span class="text-5xl font-black text-slate-900">Rp 0</span>
+                                <span class="text-slate-500 text-sm ml-2">/ Selamanya</span>
+                            </div>
+
+                            <div class="border-t border-slate-100 pt-6">
+                                <ul class="space-y-4 text-sm text-slate-600">
+                                    <li class="flex items-center gap-2.5">
+                                        <span class="text-amber-600">⚠</span> Maksimal 50 Transaksi Penjualan / Hari
+                                    </li>
+                                    <li class="flex items-center gap-2.5">
+                                        <span class="text-amber-600">⚠</span> Maksimal 10 Produk (25 Varian)
+                                    </li>
+                                    <li class="flex items-center gap-2.5">
+                                        <span class="text-amber-600">⚠</span> Akun Owner Utama (0 Akun Staf)
+                                    </li>
+                                    <li class="flex items-center gap-2.5">
+                                        <span class="text-green-600">✓</span> Laporan Harian Sederhana
+                                    </li>
+                                    <li class="flex items-center gap-2.5 text-slate-400 line-through">
+                                        <span>✗</span> Tanpa Fitur Rekomendasi Stok AI
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <a href="https://app.jaripos.com/register" class="block w-full text-center py-4 bg-white border border-slate-300 text-slate-700 font-bold hover:bg-slate-100 active:scale-95 rounded-2xl transition-all duration-300 text-sm">
+                                Mulai Gratis Sekarang
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Premium Plan Card (Varian 2: White Card dengan Border Primary #1f5aa2) -->
+                    <div class="bg-white border-2 border-[#1f5aa2] rounded-3xl p-8 flex flex-col justify-between shadow-xl relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 bg-[#1f5aa2] text-white text-[10px] font-black uppercase tracking-wider px-4 py-1.5 rounded-bl-2xl">REKOMENDASI</div>
+                        
+                        <div>
+                            <span class="px-3 py-1 rounded-full bg-[#1f5aa2]/10 text-[#1f5aa2] text-xs font-bold uppercase tracking-wider inline-block mb-6">Trial 14 Hari</span>
+                            <h2 class="text-2xl font-black text-slate-900 mb-2">Paket Jempol</h2>
+                            <p class="text-slate-500 text-sm mb-6">Akses lengkap ke seluruh ekosistem kasir pintar Jaripos yang didukung penuh oleh otomasi laporan harian.</p>
+                            
+                            <div class="flex flex-col mb-6 bg-[#1f5aa2]/5 p-4 rounded-2xl border border-[#1f5aa2]/20 space-y-2">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Paket 1 Tahun (Promo Spesial 15%)</span>
+                                    <span class="px-2 py-0.5 rounded-full bg-[#1f5aa2] text-white font-black text-[10px] uppercase">Paling Hemat 38%</span>
+                                </div>
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-4xl md:text-5xl font-black text-slate-900">Rp 34k</span>
+                                    <span class="text-slate-500 text-sm font-semibold">/ Bulan</span>
+                                    <span class="text-xs text-slate-400 line-through">Rp 65k</span>
+                                </div>
+                                <div class="flex items-center justify-between text-xs pt-1 border-t border-[#1f5aa2]/20">
+                                    <span class="text-[#1f5aa2] font-bold">Cuma Seribuan per Hari!</span>
+                                    <span class="text-slate-700 font-extrabold">Rp 408.000 / thn</span>
+                                </div>
+                                <p class="text-[11px] text-slate-500 leading-tight pt-1">
+                                    Dapatkan seluruh fitur kasir premium dengan harga hemat hingga 38% dibanding bayar bulanan.
+                                </p>
+                            </div>
+
+                            <div class="border-t border-slate-100 pt-6">
+                                <ul class="space-y-4 text-sm text-slate-600">
+                                    <li class="flex items-center gap-2.5 font-bold text-slate-900">
+                                        <span class="text-[#1f5aa2]">✓</span> Maksimal 1.000 Transaksi Penjualan / Hari
+                                    </li>
+                                    <li class="flex items-center gap-2.5 font-bold text-slate-900">
+                                        <span class="text-[#1f5aa2]">✓</span> Maksimal 500 Produk (1.000 Varian)
+                                    </li>
+                                    <li class="flex items-center gap-2.5">
+                                        <span class="text-[#1f5aa2]">✓</span> Owner + Maksimal 5 Akun Staf (Hak Akses)
+                                    </li>
+                                    <li class="flex items-center gap-2.5 font-bold text-[#1f5aa2]">
+                                        <span class="text-[#1f5aa2]">✓</span> Laporan Otomatis & Rekomendasi Stok
+                                    </li>
+                                    <li class="flex items-center gap-2.5">
+                                        <span class="text-[#1f5aa2]">✓</span> Cetak Struk Bluetooth & Laporan Laba/Rugi
+                                    </li>
+                                    <li class="flex items-center gap-2.5">
+                                        <span class="text-[#1f5aa2]">✓</span> Prioritas Dukungan WhatsApp 24/7
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <a href="https://app.jaripos.com/register" class="block w-full text-center py-4 bg-[#1f5aa2] hover:bg-[#164075] active:scale-95 font-bold rounded-2xl transition-colors duration-300 ease-out shadow-lg text-white text-sm">
+                                Mulai Coba Gratis 14 Hari
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Comparison Matrix -->
+        <section class="py-24 bg-white border-t border-slate-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-slate-900">Perbandingan Detail</h2>
+                    <p class="text-slate-500 mt-2">Bandingkan fitur secara rinci sebelum menentukan pilihan.</p>
+                </div>
+
+                <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-lg shadow-slate-100/50">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-slate-200 bg-slate-50">
+                                <th class="p-6 text-sm font-bold text-slate-500">Fitur Utama</th>
+                                <th class="p-6 text-sm font-bold text-slate-800">Paket Kelingking</th>
+                                <th class="p-6 text-sm font-bold text-cyan-600">Paket Jempol</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-sm">
+                            <tr>
+                                <td class="p-6 font-semibold text-slate-900">Batas Transaksi Penjualan</td>
+                                <td class="p-6 text-slate-600">Maksimal 50 transaksi / hari</td>
+                                <td class="p-6 text-cyan-600 font-semibold">Maksimal 1.000 transaksi / hari</td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-semibold text-slate-900">Kapasitas Produk & Varian</td>
+                                <td class="p-6 text-slate-600">10 Produk (Max 25 Varian)</td>
+                                <td class="p-6 text-cyan-600 font-semibold">500 Produk (Max 1.000 Varian)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-semibold text-slate-900">Kategori & Supplier</td>
+                                <td class="p-6 text-slate-600">Max 5 Kategori / 5 Supplier</td>
+                                <td class="p-6 text-cyan-600 font-semibold">Max 50 Kategori / 100 Supplier</td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-semibold text-slate-900">Akun Kasir (Staff)</td>
+                                <td class="p-6 text-slate-600">Owner saja (0 akun staf)</td>
+                                <td class="p-6 text-cyan-600 font-semibold">Owner + Max 5 akun staf (Role Akses)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-semibold text-slate-900">Jari AI Chatbot</td>
+                                <td class="p-6 text-slate-400">✗ Tidak tersedia</td>
+                                <td class="p-6 text-cyan-600 font-bold">✓ Tersedia (Akses Penuh)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-semibold text-slate-900">Rekomendasi Stok AI</td>
+                                <td class="p-6 text-slate-400">✗ Tidak tersedia</td>
+                                <td class="p-6 text-cyan-600 font-bold">✓ Tersedia (Akses Penuh)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-semibold text-slate-900">Cetak Struk Bluetooth</td>
+                                <td class="p-6 text-slate-600">✓ Tersedia (Max 5 Metode Bayar)</td>
+                                <td class="p-6 text-cyan-600 font-semibold">✓ Tersedia (Max 50 Metode Bayar)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-semibold text-slate-900">Laporan Keuangan</td>
+                                <td class="p-6 text-slate-600">Harian Sederhana</td>
+                                <td class="p-6 text-cyan-600 font-semibold">Laba/Rugi lengkap & Analytics Real-Time</td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-semibold text-slate-900">Dukungan (Support)</td>
+                                <td class="p-6 text-slate-600">Dukungan Komunitas</td>
+                                <td class="p-6 text-cyan-600 font-semibold">Prioritas Chat WhatsApp 24/7</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing FAQ Section -->
+        <section class="py-20 bg-slate-50 border-t border-slate-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-slate-900">Pertanyaan Seputar Harga (FAQ)</h2>
+                    <p class="text-slate-500 mt-2">Masih ragu? Temukan jawaban atas pertanyaan umum berikut.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                        <h4 class="font-bold text-slate-900 text-base mb-2">Apakah benar Paket Kelingking gratis selamanya?</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">Ya, Paket Kelingking 100% gratis selamanya tanpa membutuhkan kartu kredit saat pendaftaran. Sangat cocok untuk usaha mikro atau usaha pemula.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                        <h4 class="font-bold text-slate-900 text-base mb-2">Bagaimana jika masa uji coba Paket Jempol (14 hari) berakhir?</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">Setelah 14 hari uji coba berakhir, jika Anda belum berlangganan, akun akan otomatis beralih ke Paket Kelingking. Data Anda yang melebihi batas (seperti produk ke-11 ke atas) tidak akan dihapus, melainkan dibekukan sementara hingga Anda melakukan upgrade kembali.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                        <h4 class="font-bold text-slate-900 text-base mb-2">Berapa biaya langganan Paket Jempol?</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">Biaya langganan Paket Jempol mulai dari Rp 65.000 per bulan dengan akses seluruh fitur AI hingga 5 akun staf. Tersedia juga diskon menarik untuk pilihan langganan multi-bulan.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                        <h4 class="font-bold text-slate-900 text-base mb-2">Bagaimana metode pembayaran langganannya?</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">Anda dapat melakukan pembayaran langganan melalui transfer bank, dompet digital (Gopay, OVO, Dana, LinkAja), maupun QRIS secara instan dari aplikasi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 bg-gradient-to-b from-slate-50 to-white border-t border-slate-100 text-center relative overflow-hidden">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-6">Mulai Transformasi Bisnis Anda</h2>
+                <p class="text-slate-600 text-md md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+                    Daftar sekarang dan nikmati seluruh kemudahan operasional kasir dalam satu genggaman HP.
+                </p>
+                <div class="flex justify-center gap-4">
+                    <a href="https://app.jaripos.com/register" class="group inline-flex items-center justify-center rounded-full px-8 py-4 font-bold text-white bg-[#1f5aa2] hover:bg-[#164075] active:scale-95 transition-colors duration-300 ease-out shadow-lg shadow-[#1f5aa2]/20 gap-2">
+                        <span>Coba Gratis 14 Hari</span>
+                        <svg class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+</Layout>

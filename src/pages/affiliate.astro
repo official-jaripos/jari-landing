@@ -21,13 +21,9 @@ import Footer from '../components/Footer.astro';
             
             <section class="pt-40 pb-20 lg:pt-52 lg:pb-28 relative z-10">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-                    <span data-aos="fade-up" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-500/10 text-amber-600 text-xs font-bold uppercase tracking-wider border border-amber-500/20 mb-6">
-                        🤝 Program Kemitraan
-                    </span>
-                    
-                    <h1 data-aos="fade-up" data-aos-delay="100" class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight mb-6">
+                    <h1 data-aos="fade-up" data-aos-delay="100" class="text-4xl md:text-6xl font-extrabold text-[#121417] leading-tight tracking-tight mb-6">
                         Rekomendasikan JARIPOS, <br/>
-                        <span class="text-gradient">Dapatkan Komisi 20%!</span>
+                        <span class="text-[#1f5aa2]">Dapatkan Komisi 20%!</span>
                     </h1>
                     
                     <p data-aos="fade-up" data-aos-delay="200" class="text-lg text-slate-600 mb-10 max-w-2xl leading-relaxed">
@@ -39,9 +35,10 @@ import Footer from '../components/Footer.astro';
                             href="https://app.jaripos.com/affiliate/register" 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            class="group relative inline-flex items-center justify-center overflow-hidden rounded-full px-8 py-4 font-bold text-white bg-slate-950 hover:bg-slate-900 duration-300 shadow-xl shadow-slate-900/20"
+                            class="group inline-flex items-center justify-center rounded-full px-8 py-4 font-bold text-white bg-[#1f5aa2] hover:bg-[#164075] active:scale-95 transition-colors duration-300 ease-out shadow-lg shadow-[#1f5aa2]/20 gap-2"
                         >
-                            <span class="relative mr-2">Gabung Afiliasi Sekarang </span>(Gratis)
+                            <span>Gabung Afiliasi Sekarang (Gratis)</span>
+                            <svg class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                         </a>
                     </div>
                 </div>
@@ -52,15 +49,14 @@ import Footer from '../components/Footer.astro';
         <section id="how-it-works" class="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center mb-16" data-aos="fade-up">
-                    <span class="text-[#00AEEF] font-bold tracking-wider uppercase text-xs bg-cyan-50 px-3 py-1 rounded-full border border-cyan-100">3 Langkah Mudah</span>
-                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mt-4 mb-4 tracking-tight">Bagaimana Cara Kerjanya?</h2>
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">Bagaimana Cara Kerjanya?</h2>
                     <p class="text-slate-500 text-sm md:text-base max-w-xl mx-auto">Mulai menghasilkan pendapatan tambahan dalam hitungan menit dengan alur kerja yang sederhana.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     <!-- Step 1 -->
                     <div data-aos="fade-up" data-aos-delay="100" class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm relative group hover:shadow-md transition duration-300">
-                        <div class="w-12 h-12 rounded-2xl bg-cyan-50 flex items-center justify-center text-cyan-600 font-extrabold text-lg mb-6 group-hover:scale-110 transition duration-300">1</div>
+                        <div class="w-12 h-12 rounded-2xl bg-[#1f5aa2]/10 flex items-center justify-center text-[#1f5aa2] font-extrabold text-lg mb-6">1</div>
                         <h3 class="text-xl font-bold text-slate-900 mb-3">Daftar Instan</h3>
                         <p class="text-slate-500 text-sm leading-relaxed">
                             Registrasi akun Anda secara gratis di portal afiliasi kami dalam 2 menit. Anda akan langsung mendapatkan link referral unik Anda sendiri.
@@ -69,7 +65,7 @@ import Footer from '../components/Footer.astro';
 
                     <!-- Step 2 -->
                     <div data-aos="fade-up" data-aos-delay="200" class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm relative group hover:shadow-md transition duration-300">
-                        <div class="w-12 h-12 rounded-2xl bg-amber-50 flex items-center justify-center text-amber-600 font-extrabold text-lg mb-6 group-hover:scale-110 transition duration-300">2</div>
+                        <div class="w-12 h-12 rounded-2xl bg-[#1f5aa2]/10 flex items-center justify-center text-[#1f5aa2] font-extrabold text-lg mb-6">2</div>
                         <h3 class="text-xl font-bold text-slate-900 mb-3">Bagikan Link & Voucher</h3>
                         <p class="text-slate-500 text-sm leading-relaxed">
                             Promosikan link referral atau kode voucher JARIPOS Anda ke rekan bisnis, komunitas kuliner/retail, atau lewat media sosial Anda.
@@ -78,7 +74,7 @@ import Footer from '../components/Footer.astro';
 
                     <!-- Step 3 -->
                     <div data-aos="fade-up" data-aos-delay="300" class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm relative group hover:shadow-md transition duration-300">
-                        <div class="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-600 font-extrabold text-lg mb-6 group-hover:scale-110 transition duration-300">3</div>
+                        <div class="w-12 h-12 rounded-2xl bg-[#1f5aa2]/10 flex items-center justify-center text-[#1f5aa2] font-extrabold text-lg mb-6">3</div>
                         <h3 class="text-xl font-bold text-slate-900 mb-3">Dapatkan Komisi 20%</h3>
                         <p class="text-slate-500 text-sm leading-relaxed">
                             Terima komisi 20% setiap kali ada transaksi pembelian baru atau perpanjangan paket yang menggunakan kode referal/voucher Anda.
@@ -92,15 +88,14 @@ import Footer from '../components/Footer.astro';
         <section id="benefits" class="py-16 md:py-24 bg-white relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center mb-16" data-aos="fade-up">
-                    <span class="text-amber-600 font-bold tracking-wider uppercase text-xs bg-amber-50 px-3 py-1 rounded-full border border-amber-200">Keuntungan Bergabung</span>
-                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mt-4 mb-4 tracking-tight">Mengapa Memilih JARIPOS?</h2>
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">Mengapa Memilih JARIPOS?</h2>
                     <p class="text-slate-500 text-sm md:text-base max-w-xl mx-auto">Kami menghargai kontribusi Anda dengan komisi terbaik dan transparansi penuh.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     <!-- Benefit 1 -->
                     <div data-aos="fade-up" class="flex flex-col gap-3 p-6 bg-slate-50/50 rounded-2xl hover:bg-slate-50 transition duration-300">
-                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-lg shrink-0 border border-amber-500/20">
+                        <div class="w-10 h-10 rounded-xl bg-[#1f5aa2]/10 text-[#1f5aa2] flex items-center justify-center text-lg shrink-0 border border-[#1f5aa2]/20">
                             <i class="fas fa-percent"></i>
                         </div>
                         <div>
@@ -113,7 +108,7 @@ import Footer from '../components/Footer.astro';
 
                     <!-- Benefit 2 -->
                     <div data-aos="fade-up" class="flex flex-col gap-3 p-6 bg-slate-50/50 rounded-2xl hover:bg-slate-50 transition duration-300">
-                        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-600 flex items-center justify-center text-lg shrink-0 border border-cyan-500/20">
+                        <div class="w-10 h-10 rounded-xl bg-[#1f5aa2]/10 text-[#1f5aa2] flex items-center justify-center text-lg shrink-0 border border-[#1f5aa2]/20">
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <div>
@@ -126,7 +121,7 @@ import Footer from '../components/Footer.astro';
 
                     <!-- Benefit 3 -->
                     <div data-aos="fade-up" class="flex flex-col gap-3 p-6 bg-slate-50/50 rounded-2xl hover:bg-slate-50 transition duration-300">
-                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-lg shrink-0 border border-emerald-500/20">
+                        <div class="w-10 h-10 rounded-xl bg-[#1f5aa2]/10 text-[#1f5aa2] flex items-center justify-center text-lg shrink-0 border border-[#1f5aa2]/20">
                             <i class="fas fa-wallet"></i>
                         </div>
                         <div>
@@ -145,8 +140,7 @@ import Footer from '../components/Footer.astro';
         <section id="faq" class="py-16 md:py-24 bg-slate-50 relative overflow-hidden border-t border-slate-100">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center mb-16" data-aos="fade-up">
-                    <span class="text-[#00AEEF] font-bold tracking-wider uppercase text-xs bg-cyan-50 px-3 py-1 rounded-full border border-cyan-100">Tanya Jawab</span>
-                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mt-4 mb-4 tracking-tight">Pertanyaan Umum (FAQ)</h2>
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">Pertanyaan Umum (FAQ)</h2>
                     <p class="text-slate-500 text-sm md:text-base">Punya pertanyaan seputar program afiliasi kami? Cari jawabannya di bawah ini.</p>
                 </div>
 
@@ -223,11 +217,11 @@ import Footer from '../components/Footer.astro';
                         href="https://app.jaripos.com/affiliate/register" 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        class="w-full md:w-auto text-center px-8 py-4 rounded-xl bg-gradient-to-r from-[#dfba6b] to-[#c29c47] hover:brightness-110 text-slate-950 font-extrabold text-base transition-all duration-300 shadow-lg hover:scale-[1.02] shrink-0 relative z-10 cursor-pointer"
+                        class="group w-full md:w-auto text-center px-8 py-4 rounded-full bg-gradient-to-r from-[#dfba6b] to-[#c29c47] hover:brightness-110 active:scale-95 text-slate-950 font-extrabold text-base transition-all duration-300 ease-out shadow-lg shrink-0 relative z-10 cursor-pointer inline-flex items-center justify-center gap-2"
                     >
                         <span class="hidden md:inline">Daftar Kemitraan Sekarang</span>
                         <span class="inline md:hidden">Daftar Sekarang</span>
-                        <i class="fas fa-arrow-right ml-1"></i>
+                        <i class="fas fa-arrow-right text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
                     </a>
                 </div>
             </div>

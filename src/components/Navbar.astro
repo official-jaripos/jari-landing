@@ -31,7 +31,7 @@ const { isAffiliatePage = false } = Astro.props;
 </div>
 )}
 
-<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out bg-transparent border-b border-white/10">
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out bg-transparent border-b border-slate-200/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div id="navbar-container" class="flex justify-between items-center h-28 transition-all duration-500">
             <!-- Logo -->
@@ -41,13 +41,11 @@ const { isAffiliatePage = false } = Astro.props;
             </a>
 
             <style>
-                /* Override default transition-all on top to prevent lag while scrolling */
                 #navbar {
                     transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out !important;
                     will-change: top, background-color;
                 }
 
-                /* Stacking context & Display Overrides */
                 @media (max-width: 767px) {
                     .desktop-menu-container {
                         display: none !important;
@@ -74,29 +72,10 @@ const { isAffiliatePage = false } = Astro.props;
                 
                 #navbar.nav-scrolled .logo-white { display: block !important; }
                 #navbar.nav-scrolled .logo-black { display: none !important; }
-                
-                /* Dynamic theme overrides for dark sections if any */
-                #navbar.nav-dark .logo-black { display: none !important; }
-                #navbar.nav-dark .logo-white { display: block !important; }
-
-                /* Solid mobile menu background when open */
-                #navbar.mobile-menu-open {
-                    background-color: #ffffff !important;
-                    border-bottom: 1px solid #e2e8f0 !important;
-                    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05) !important;
-                }
-                #navbar.mobile-menu-open.nav-scrolled {
-                    background-color: #0f172a !important;
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-                }
-                
-                /* Logo overrides when mobile menu is open in non-scrolled mode */
-                #navbar.mobile-menu-open:not(.nav-scrolled) .logo-black { display: block !important; }
-                #navbar.mobile-menu-open:not(.nav-scrolled) .logo-white { display: none !important; }
 
                 /* Mobile Hamburger Button Color Enforcement */
                 #mobile-menu-btn {
-                    color: #1e293b !important; /* slate-800/900 */
+                    color: #1e293b !important;
                     display: flex !important;
                     align-items: center !important;
                     justify-content: center !important;
@@ -104,9 +83,6 @@ const { isAffiliatePage = false } = Astro.props;
                 }
                 #navbar.nav-scrolled #mobile-menu-btn {
                     color: #ffffff !important;
-                }
-                #navbar.mobile-menu-open:not(.nav-scrolled) #mobile-menu-btn {
-                    color: #1e293b !important;
                 }
                 #mobile-menu-btn svg {
                     stroke: currentColor !important;
@@ -125,28 +101,22 @@ const { isAffiliatePage = false } = Astro.props;
             <div class="desktop-menu-container space-x-8">
                 {isAffiliatePage ? (
                     <>
-                        <a href="#how-it-works" class="nav-link text-slate-900 hover:text-cyan-brand font-medium transition duration-300 hover:-translate-y-0.5">Cara Kerja</a>
-                        <a href="#benefits" class="nav-link text-slate-900 hover:text-cyan-brand font-medium transition duration-300 hover:-translate-y-0.5">Keuntungan</a>
-                        <a href="#faq" class="nav-link text-slate-900 hover:text-cyan-brand font-medium transition duration-300 hover:-translate-y-0.5">FAQ</a>
-                        <a href="https://app.jaripos.com/affiliate/register" target="_blank" rel="noopener noreferrer" data-track="nav-cta-desktop" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-2.5 font-semibold text-white bg-cyan-brand duration-300 hover:brightness-110 shadow-lg shadow-cyan-500/20">
-                            <div class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
-                                <div class="relative h-full w-8 bg-white/20"></div>
-                            </div>
-                            <span class="relative">Daftar Afiliasi</span>
+                        <a href="#how-it-works" class="nav-link text-slate-900 hover:text-[#1f5aa2] font-medium transition duration-300 hover:-translate-y-0.5">Cara Kerja</a>
+                        <a href="#benefits" class="nav-link text-slate-900 hover:text-[#1f5aa2] font-medium transition duration-300 hover:-translate-y-0.5">Keuntungan</a>
+                        <a href="#faq" class="nav-link text-slate-900 hover:text-[#1f5aa2] font-medium transition duration-300 hover:-translate-y-0.5">FAQ</a>
+                        <a href="https://app.jaripos.com/affiliate/register" target="_blank" rel="noopener noreferrer" data-track="nav-cta-desktop" class="group inline-flex items-center justify-center rounded-full px-6 py-2.5 font-semibold text-white bg-[#1f5aa2] hover:bg-[#164075] active:scale-95 transition-colors duration-300 ease-out shadow-md">
+                            <span>Daftar Afiliasi</span>
                         </a>
                     </>
                 ) : (
                     <>
-                        <a href="/#comparison" class="nav-link text-slate-900 hover:text-cyan-brand font-medium transition duration-300 hover:-translate-y-0.5">Kenapa JARIPOS?</a>
-                        <a href="/#target-market" class="nav-link text-slate-900 hover:text-cyan-brand font-medium transition duration-300 hover:-translate-y-0.5">Cocok untuk Siapa?</a>
-                        <a href="/#features" class="nav-link text-slate-900 hover:text-cyan-brand font-medium transition duration-300 hover:-translate-y-0.5">Fitur</a>
-                        <a href="/#pricing" class="nav-link text-slate-900 hover:text-cyan-brand font-medium transition duration-300 hover:-translate-y-0.5">Harga</a>
-                        <a href="https://app.jaripos.com" data-track="nav-login" class="nav-link text-slate-900 hover:text-cyan-brand font-medium transition duration-300 hover:-translate-y-0.5">Masuk</a>
-                        <a href="https://app.jaripos.com/register" data-track="nav-cta-desktop" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-2.5 font-semibold text-white bg-cyan-brand duration-300 hover:brightness-110 shadow-lg shadow-cyan-500/20">
-                            <div class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
-                                <div class="relative h-full w-8 bg-white/20"></div>
-                            </div>
-                            <span class="relative">Coba Gratis</span>
+                        <a href="/#comparison" class="nav-link text-slate-900 hover:text-[#1f5aa2] font-medium transition duration-300 hover:-translate-y-0.5">Kenapa JARIPOS?</a>
+                        <a href="/#target-market" class="nav-link text-slate-900 hover:text-[#1f5aa2] font-medium transition duration-300 hover:-translate-y-0.5">Cocok untuk Siapa?</a>
+                        <a href="/#features" class="nav-link text-slate-900 hover:text-[#1f5aa2] font-medium transition duration-300 hover:-translate-y-0.5">Fitur</a>
+                        <a href="/#pricing" class="nav-link text-slate-900 hover:text-[#1f5aa2] font-medium transition duration-300 hover:-translate-y-0.5">Harga</a>
+                        <a href="https://app.jaripos.com" data-track="nav-login" class="nav-link text-slate-900 hover:text-[#1f5aa2] font-medium transition duration-300 hover:-translate-y-0.5">Masuk</a>
+                        <a href="https://app.jaripos.com/register" data-track="nav-cta-desktop" class="group inline-flex items-center justify-center rounded-full px-6 py-2.5 font-semibold text-white bg-[#1f5aa2] hover:bg-[#164075] active:scale-95 transition-colors duration-300 ease-out shadow-md">
+                            <span>Coba Gratis</span>
                         </a>
                     </>
                 )}
@@ -169,22 +139,22 @@ const { isAffiliatePage = false } = Astro.props;
     </div>
     
     <!-- Mobile Menu Panel -->
-    <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white border-b border-slate-200 shadow-xl transition-colors duration-500">
+    <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-[#121417] border-b border-[#262a33] shadow-xl transition-colors duration-500">
         <div class="px-4 pt-2 pb-6 space-y-2">
             {isAffiliatePage ? (
                 <>
-                    <a href="#how-it-works" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-slate-50">Cara Kerja</a>
-                    <a href="#benefits" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-slate-50">Keuntungan</a>
-                    <a href="#faq" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-slate-50">FAQ</a>
-                    <a href="https://app.jaripos.com/affiliate/register" target="_blank" rel="noopener noreferrer" data-track="nav-cta-mobile" class="block w-full text-center mt-4 px-6 py-3 rounded-lg text-white bg-cyan-brand font-bold shadow-md">Daftar Afiliasi</a>
+                    <a href="#how-it-works" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Cara Kerja</a>
+                    <a href="#benefits" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Keuntungan</a>
+                    <a href="#faq" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">FAQ</a>
+                    <a href="https://app.jaripos.com/affiliate/register" target="_blank" rel="noopener noreferrer" data-track="nav-cta-mobile" class="block w-full text-center mt-4 px-6 py-3 rounded-lg text-white bg-[#1f5aa2] font-bold shadow-md">Daftar Afiliasi</a>
                 </>
             ) : (
                 <>
-                    <a href="/#comparison" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-slate-50">Kenapa JARIPOS?</a>
-                    <a href="/#target-market" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-slate-50">Cocok untuk Siapa?</a>
-                    <a href="/#features" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-slate-50">Fitur</a>
-                    <a href="/#pricing" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-slate-50">Harga</a>
-                    <a href="https://app.jaripos.com/register" data-track="nav-cta-mobile" class="block w-full text-center mt-4 px-6 py-3 rounded-lg text-white bg-cyan-brand font-bold shadow-md">Coba Gratis Sekarang</a>
+                    <a href="/#comparison" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Kenapa JARIPOS?</a>
+                    <a href="/#target-market" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Cocok untuk Siapa?</a>
+                    <a href="/#features" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Fitur</a>
+                    <a href="/#pricing" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Harga</a>
+                    <a href="https://app.jaripos.com/register" data-track="nav-cta-mobile" class="block w-full text-center mt-4 px-6 py-3 rounded-lg text-white bg-[#1f5aa2] font-bold shadow-md">Coba Gratis Sekarang</a>
                 </>
             )}
         </div>

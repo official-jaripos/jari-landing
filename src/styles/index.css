@@ -1,20 +1,25 @@
 /* Custom Utilities */
+.font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
 .glass-nav {
     background: rgba(230, 239, 246, 0.9);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
 .text-gradient {
-    background: linear-gradient(135deg, #00AEEF 0%, #00d2ff 100%);
+    background: linear-gradient(135deg, #1f5aa2 0%, #3174cb 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.bg-cyan-brand {
-    background-color: #00AEEF;
+.bg-cyan-brand,
+.bg-brand-primary {
+    background-color: #1f5aa2;
 }
-.text-cyan-brand {
-    color: #00AEEF;
+.text-cyan-brand,
+.text-brand-primary {
+    color: #1f5aa2;
 }
 .mockup-shadow {
     box-shadow: 0 25px 50px -12px rgba(14, 165, 233, 0.25);
@@ -60,11 +65,11 @@
     background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
 }
 
-/* Navbar Scrolled Theme (Matches Footer) */
+/* Navbar Scrolled Theme (Matches Footer Obsidian Charcoal) */
 nav.nav-scrolled {
-    background-color: rgba(15, 23, 42, 0.9) !important; /* Slate 900 with transparency */
+    background-color: rgba(18, 20, 23, 0.95) !important; /* Obsidian Charcoal #121417 */
     backdrop-filter: blur(20px) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5) !important;
 }
 nav.nav-scrolled #logo-text { color: #ffffff !important; }
@@ -73,11 +78,11 @@ nav.nav-scrolled .nav-link:hover { color: #ffffff !important; }
 nav.nav-scrolled #mobile-menu-btn { color: #ffffff !important; }
 
 /* Mobile Menu Theme Sync for Scrolled Mode */
-nav.nav-scrolled #mobile-menu { background-color: #0f172a !important; border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important; }
+nav.nav-scrolled #mobile-menu { background-color: #121417 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important; }
 nav.nav-scrolled .mobile-nav-link { color: rgba(255, 255, 255, 0.7) !important; }
 nav.nav-scrolled .mobile-nav-link:hover { color: #ffffff !important; background-color: rgba(255, 255, 255, 0.05) !important; }
 
-/* Light Mode Hero & Mesh Pattern (Inspired by Footer) */
+/* Light Mode Hero & Mesh Pattern */
 .hero-light-wrapper {
     background-color: #ffffff;
     position: relative;

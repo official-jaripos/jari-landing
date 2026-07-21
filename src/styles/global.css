@@ -2,29 +2,30 @@
 
 @theme {
   --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-display: "Outfit", sans-serif;
   
-  /* Primary Colors based on dashboard */
-  --color-brand-50: #e9eff7;  /* app-primary-dim */
-  --color-brand-100: #dbeafe;
-  --color-brand-200: #a7c1e1; /* app-primary-border */
-  --color-brand-300: #93c5fd;
-  --color-brand-400: #60a5fa;
-  --color-brand-500: #3b82f6;
-  --color-brand-600: #2263b3; /* app-primary */
-  --color-brand-700: #1f5aa2; /* app-primary-hover */
-  --color-brand-800: #1d5599; /* app-primary-active */
-  --color-brand-900: #1e3a8a;
+  /* Primary Colors based on brand #1f5aa2 */
+  --color-brand-50: #edf4fc;
+  --color-brand-100: #d7e5f8;
+  --color-brand-200: #b5d1f2;
+  --color-brand-300: #88b4e9;
+  --color-brand-400: #5490dc;
+  --color-brand-500: #3174cb;
+  --color-brand-600: #1f5aa2; /* Primary Brand Color */
+  --color-brand-700: #194884;
+  --color-brand-800: #183d6d;
+  --color-brand-900: #18345b;
 
-  /* Dark Theme Colors: Soft & Clean (Abu-abu kebiruan kalem) */
-  --color-slate-950: #0f172a; /* Tailwind slate-900 */
-  --color-slate-900: #1e293b; /* Tailwind slate-800 */
-  --color-slate-800: #334155; /* Tailwind slate-700 */
-  --color-slate-700: #475569; /* Tailwind slate-600 */
+  /* Dark Theme Colors: Obsidian Charcoal & Graphite (100% Netral, Bebas Purple) */
+  --color-slate-950: #0a0b0d;
+  --color-slate-900: #121417; /* Main Obsidian Dark Background */
+  --color-slate-800: #1a1d24; /* Card Dark Background */
+  --color-slate-700: #262a33; /* Border Dark Color */
   
-  /* Text Colors: Soft & Clean */
-  --color-slate-400: #94a3b8; /* Tailwind slate-400 */
-  --color-slate-300: #cbd5e1; /* Tailwind slate-300 */
+  /* Text Colors */
+  --color-slate-400: #9ca3af;
+  --color-slate-300: #d1d5db;
 
-  --color-secondary-900: #1e293b;
+  --color-secondary-900: #1a1d24;
 }
 

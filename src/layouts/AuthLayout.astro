@@ -5,12 +5,14 @@ interface Props {
 	title: string;
 	description?: string;
 	gtmId?: string;
+	robots?: string;
 }
 
 const { 
 	title, 
 	description = "Login or Register to Jaripos",
-	gtmId = "GTM-TZGSJ83F"
+	gtmId = "GTM-TZGSJ83F",
+	robots = "index, follow"
 } = Astro.props;
 ---
 
@@ -32,10 +34,13 @@ const {
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{title}</title>
 		<meta name="description" content={description} />
-		<meta name="robots" content="noindex, nofollow" />
+		<meta name="robots" content={robots} />
 		
 		<meta name="theme-color" content="#0ea5e9">
 		<link rel="shortcut icon" href="/assets/images/brand-logo.svg">
+		
+		<!-- Custom Head Slot -->
+		<slot name="head" />
 		
 		<!-- Fonts & Icons -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">

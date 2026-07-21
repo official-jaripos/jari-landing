@@ -1,22 +1,14 @@
 ---
 ---
-<footer class="relative w-full z-0 bg-slate-900 flex flex-col items-center text-slate-400 overflow-hidden">
-    <!-- Animated Mesh Gradient Background -->
-    <div class="absolute inset-0 opacity-40">
-        <div class="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_farthest-corner_at_center,_var(--tw-gradient-stops))] from-indigo-900/40 via-slate-950 to-slate-950 animate-spin-slow"></div>
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-600/20 rounded-full blur-[100px] animate-pulse"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] animate-pulse" style="animation-duration: 4s;"></div>
-    </div>
-
-    <!-- Grid Pattern Overlay -->
-    <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-soft-light"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+<footer class="relative w-full z-0 bg-[#121417] flex flex-col items-center text-slate-400 overflow-hidden border-t border-slate-700/80">
+    <!-- Grid Pattern Overlay (Matching Hero Section 100px Grid with Top-to-Bottom Fade Mask) -->
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:linear-gradient(to_bottom,#000_15%,transparent_85%)] pointer-events-none"></div>
 
     <div class="max-w-[90%] w-full relative z-10 flex flex-col h-full justify-between">
         <!-- Big Background Text at the Very Bottom -->
         <div class="absolute bottom-0 left-0 right-0 pointer-events-none z-0 mb-[-5vw] md:mb-[-1vw]" data-aos="fade-up">
             <div class="relative w-full text-center">
-                <span aria-hidden="true" class="text-[15vw] font-black leading-none tracking-tighter cursor-default select-none font-sans text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.05);">
+                <span aria-hidden="true" class="text-[15vw] font-black leading-none tracking-tighter cursor-default select-none font-sans text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.1);">
                     JARIPOS
                 </span>
             </div>
@@ -26,21 +18,19 @@
         <div class="flex-grow flex flex-col items-center justify-center relative z-10 w-full py-24 md:py-32">
             <!-- CTA Content Merged into Footer -->
             <div class="max-w-4xl w-full flex flex-col items-center justify-center text-center px-6 md:px-4">
-                <h2 data-aos="zoom-in" class="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                <h2 data-aos="zoom-in" class="text-3xl md:text-5xl font-bold font-display text-white mb-4 leading-tight">
                     Siap Mengubah Bisnis Anda?
                 </h2>
                 <p data-aos="fade-up" data-aos-delay="100" class="text-slate-300 text-md md:text-xl mb-8 max-w-2xl">
                     Bergabunglah bersama pemilik bisnis cerdas yang telah beralih ke Jaripos.
                 </p>
                 <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col sm:flex-row justify-center gap-4 w-full md:w-auto">
-                    <a href="https://app.jaripos.com/register" data-track="bottom-cta-register" class="group w-full sm:w-auto relative inline-flex items-center justify-center overflow-hidden rounded-full px-8 py-4 font-bold text-slate-900 bg-white border-2 border-white duration-300 hover:bg-transparent hover:text-white shadow-2xl">
-                        <div class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
-                            <div class="relative h-full w-8 bg-white/20"></div>
-                        </div>
-                        <span class="relative">Coba Gratis Sekarang</span>
+                    <a href="https://app.jaripos.com/register" data-track="bottom-cta-register" class="group w-full sm:w-auto inline-flex items-center justify-center rounded-full px-8 py-4 font-bold text-white bg-[#1f5aa2] hover:bg-[#164075] active:scale-95 transition-colors duration-300 ease-out shadow-lg gap-2">
+                        <span>Coba Gratis Sekarang</span>
+                        <svg class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                     </a>
-                    <a href="https://wa.me/6285875502569" target="_blank" data-track="bottom-cta-wa" class="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-white/50 text-white font-bold text-base rounded-full hover:bg-white/10 hover:border-white transition flex items-center justify-center gap-2">
-                        <i class="fab fa-whatsapp text-xl"></i>
+                    <a href="https://wa.me/6285875502569" target="_blank" data-track="bottom-cta-wa" class="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-slate-600 text-white font-bold text-base rounded-full hover:bg-slate-800 hover:border-slate-500 active:scale-95 transition-colors duration-300 flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp text-xl text-green-400"></i>
                         Hubungi Sales
                     </a>
                 </div>
@@ -49,44 +39,47 @@
                 </p>
             </div>
         </div>
-        <!-- Grid & Copyright -->
-        <div class="relative z-20 w-full">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left border-t border-white/10 pt-8 bg-slate-950/20 backdrop-blur-sm rounded-t-3xl p-6">
-                <div class="flex flex-col items-center md:items-start space-y-3">
-                    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Kantor</span>
-                    <p class="text-sm text-slate-300">Semarang, Jawa Tengah</p>
-                    <a href="mailto:official.jaripos@gmail.com" class="text-sm text-brand-400 hover:text-white transition">official.jaripos@gmail.com</a>
+        <!-- Grid & Copyright (Soft Light Container Theme for High Legibility) -->
+        <div class="relative z-20 w-full mb-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8 text-left border border-slate-200/90 bg-[#f8fafc] text-slate-900 rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-2xl">
+                <!-- Column 1: Kantor -->
+                <div class="flex flex-col space-y-3 col-span-2 md:col-span-1">
+                    <span class="text-xs font-black text-[#1f5aa2] uppercase tracking-widest">Kantor</span>
+                    <p class="text-sm text-slate-700 font-semibold">Semarang, Jawa Tengah</p>
+                    <a href="mailto:official.jaripos@gmail.com" class="text-sm text-[#1f5aa2] hover:text-[#194884] font-bold underline transition">official.jaripos@gmail.com</a>
                 </div>
 
-                <div class="flex flex-col items-center justify-center space-y-1">
-                    <img src="/LOGO-JARI-WHITE.png" alt="Jaripos Logo" class="h-8 md:h-10 w-auto opacity-90" />
-                    <p class="text-[10px] font-bold text-brand-400 tracking-[0.2em] uppercase font-sans opacity-90 mb-2">
+                <!-- Column 2: Branding -->
+                <div class="flex flex-col items-start md:items-center space-y-1 col-span-2 md:col-span-1">
+                    <img src="/LOGO-JARI-BLACK.png" alt="Jaripos Logo" class="h-8 md:h-10 w-auto" />
+                    <p class="text-[10px] font-black text-[#1f5aa2] tracking-[0.2em] uppercase font-sans mb-2">
                         Kendali Bisnis, di Ujung Jari
                     </p>
                     <div class="flex gap-4 pt-1">
-                        <a href="https://www.instagram.com/official.jaripos" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-slate-500 hover:text-white transition text-sm">
+                        <a href="https://www.instagram.com/official.jaripos" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-slate-700 hover:text-[#1f5aa2] transition text-sm">
                            <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" aria-label="Facebook" class="text-slate-500 hover:text-white transition text-sm">
+                        <a href="#" aria-label="Facebook" class="text-slate-700 hover:text-[#1f5aa2] transition text-sm">
                            <i class="fab fa-facebook"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@official.jaripos" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="text-slate-500 hover:text-white transition text-sm">
+                        <a href="https://www.tiktok.com/@official.jaripos" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="text-slate-700 hover:text-[#1f5aa2] transition text-sm">
                            <i class="fab fa-tiktok"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="flex flex-col items-center md:items-end space-y-3">
-                    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Ketentuan</span>
-                    <div class="flex gap-4 md:gap-2 md:flex-col">
-                         <a href="/privacy-policy" class="text-sm text-end text-slate-400 hover:text-white transition">Kebijakan Privasi</a>
-                         <a href="/terms" class="text-sm text-end text-slate-400 hover:text-white transition">Syarat & Ketentuan</a>
+                <!-- Column 4: Ketentuan -->
+                <div class="flex flex-col space-y-3 md:items-end col-span-2 md:col-span-1">
+                    <div class="flex flex-col space-y-2 md:items-end">
+                        <span class="text-xs font-black text-[#1f5aa2] uppercase tracking-widest">Ketentuan</span>
+                        <a href="/privacy-policy" class="text-sm text-slate-700 font-bold hover:text-[#1f5aa2] transition md:text-right">Kebijakan Privasi</a>
+                        <a href="/terms" class="text-sm text-slate-700 font-bold hover:text-[#1f5aa2] transition md:text-right">Syarat & Ketentuan</a>
                     </div>
                 </div>
             </div>
             
-            <div class="mt-4 text-center text-slate-600 text-xs pb-4">
-                &copy; 2026 Jaripos.
+            <div class="mt-4 text-center text-slate-400 text-xs pb-4">
+                &copy; 2026 OFFICIAL JARIPOS.
             </div>
         </div>
     </div>
