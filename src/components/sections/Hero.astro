@@ -1,4 +1,12 @@
 ---
+interface Props {
+    variant?: 'A' | 'B';
+}
+
+const { variant: propVariant } = Astro.props;
+const urlVariant = Astro.url.searchParams.get('variant')?.toUpperCase() as 'A' | 'B' | undefined;
+const variant = propVariant || urlVariant || 'A';
+const isVariantB = variant === 'B';
 ---
 <section class="pt-32 pb-20 lg:pt-56 lg:pb-32 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
@@ -8,23 +16,39 @@
             <!-- Hero Content -->
             <div class="max-w-4xl mx-auto flex flex-col items-center text-center mb-12 md:mb-20">
 
-                <!-- Headline -->
-                <h1 data-aos="fade-up" data-aos-delay="200" class="text-4xl md:text-7xl font-black font-display text-[#121417] leading-tight tracking-tight mb-6">
+                <!-- Headline Variant A -->
+                <h1 data-variant-a style={isVariantB ? "display: none !important;" : ""} data-aos="fade-up" data-aos-delay="200" class="text-4xl md:text-7xl font-black font-display text-[#121417] leading-tight tracking-tight mb-6">
                     Aplikasi Kasir Pintar <br class="hidden md:block" />
                     <span>Paling Terjangkau untuk UMKM</span>
                 </h1>
 
-                <!-- Subheadline -->
-                <p data-aos="fade-up" data-aos-delay="300" class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed">
+                <!-- Headline Variant B -->
+                <h1 data-variant-b style={isVariantB ? "" : "display: none !important;"} data-aos="fade-up" data-aos-delay="200" class="text-4xl md:text-7xl font-black font-display text-[#121417] leading-tight tracking-tight mb-6">
+                    Usaha Lancar <br class="hidden md:block" />
+                    <span>Pembukuan Kelar Tanpa Begadang</span>
+                </h1>
+
+                <!-- Subheadline Variant A -->
+                <p data-variant-a style={isVariantB ? "display: none !important;" : ""} data-aos="fade-up" data-aos-delay="300" class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed">
                     Tinggalkan cara manual yang ribet. Jaripos memudahkan migrasi bisnis Anda ke digital—atur transaksi dan stok dalam satu genggaman, kapan saja dan di mana saja.
+                </p>
+
+                <!-- Subheadline Variant B -->
+                <p data-variant-b style={isVariantB ? "" : "display: none !important;"} data-aos="fade-up" data-aos-delay="300" class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed">
+                    Capek hitung omzet & cek sisa stok satu per satu? Beralih ke JARIPOS—kasir pintar berbasis AI yang atur transaksi, stok, & laporan laba-rugi otomatis dalam satu genggaman tanpa perlu beli alat kasir mahal.
                 </p>
 
                 <!-- CTA Buttons -->
                 <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
-                    <a href="https://app.jaripos.com/register" data-track="hero-cta-primary" class="group inline-flex items-center justify-center rounded-full px-8 py-4 font-bold text-white bg-[#1f5aa2] hover:bg-[#164075] active:scale-95 transition-colors duration-300 ease-out shadow-lg shadow-[#1f5aa2]/20">
+                    <a data-variant-a style={isVariantB ? "display: none !important;" : ""} href="https://app.jaripos.com/register" data-track="hero-cta-primary" class="group inline-flex items-center justify-center rounded-full px-8 py-4 font-bold text-white bg-[#1f5aa2] hover:bg-[#164075] active:scale-95 transition-colors duration-300 ease-out shadow-lg shadow-[#1f5aa2]/20">
                         <span class="mr-2">Coba Gratis Sekarang</span>
                         <svg class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                     </a>
+                    <a data-variant-b style={isVariantB ? "" : "display: none !important;"} href="https://app.jaripos.com/register" data-track="hero-cta-primary" class="group inline-flex items-center justify-center rounded-full px-8 py-4 font-bold text-white bg-[#1f5aa2] hover:bg-[#164075] active:scale-95 transition-colors duration-300 ease-out shadow-lg shadow-[#1f5aa2]/20">
+                        <span class="mr-2">Coba Gratis 14 Hari (Tanpa Biaya)</span>
+                        <svg class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                    </a>
+
                     <a href="https://wa.me/6285875502569?text=Halo%2C%20saya%20tertarik%20dengan%20Jaripos" target="_blank" data-track="hero-cta-whatsapp" class="px-8 py-4 rounded-full text-slate-700 bg-white border-2 border-slate-200 hover:bg-slate-50 hover:border-slate-300 active:scale-95 transition-colors duration-300 ease-out font-semibold flex items-center justify-center gap-2 group">
                         <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600">
                             <i class="fab fa-whatsapp text-lg"></i>
@@ -33,10 +57,16 @@
                     </a>
                 </div>
 
-                <!-- Trust Bar -->
-                <div data-aos="fade-up" data-aos-delay="500" class="flex items-center justify-center gap-2 mt-8 text-slate-500 text-sm font-medium">
+                <!-- Trust Bar Variant A -->
+                <div data-variant-a style={isVariantB ? "display: none !important;" : ""} data-aos="fade-up" data-aos-delay="500" class="flex items-center justify-center gap-2 mt-8 text-slate-500 text-sm font-medium">
                     <svg class="w-4 h-4 text-[#1f5aa2]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                     <span>Aplikasi kasir terintegrasi untuk berbagai bidang toko & usaha</span>
+                </div>
+
+                <!-- Trust Bar Variant B -->
+                <div data-variant-b style={isVariantB ? "" : "display: none !important;"} data-aos="fade-up" data-aos-delay="500" class="flex items-center justify-center gap-2 mt-8 text-slate-500 text-sm font-medium">
+                    <svg class="w-4 h-4 text-[#1f5aa2]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>Tanpa Kartu Kredit • 100% Bebas Risiko • Siap Pakai Dalam 2 Menit</span>
                 </div>
             </div>
 
