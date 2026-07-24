@@ -233,5 +233,53 @@ const {
 
 		<!-- Analytics Event Tracking (pushes to GTM dataLayer) -->
 		<script is:inline src="/assets/js/analytics.js"></script>
+
+		<!-- Dynamic Client-side A/B Testing Controller (50/50 Random Split + LocalStorage + Analytics) -->
+		<script is:inline>
+			(function() {
+				function initABTesting() {
+					const urlParams = new URLSearchParams(window.location.search);
+					let variant = urlParams.get('variant')?.toUpperCase();
+
+					// 1. Jika ada override di URL (?variant=A atau ?variant=B), gunakan dan simpan
+					if (variant === 'A' || variant === 'B') {
+						try { localStorage.setItem('jaripos_ab_variant', variant); } catch (e) {}
+					} else {
+						// 2. Cek memori kunjungan sebelumnya di localStorage
+						try { variant = localStorage.getItem('jaripos_ab_variant'); } catch (e) {}
+						
+						// 3. Jika pengunjung baru, bagi 50:50 secara acak
+						if (!variant || (variant !== 'A' && variant !== 'B')) {
+							variant = Math.random() < 0.5 ? 'A' : 'B';
+							try { localStorage.setItem('jaripos_ab_variant', variant); } catch (e) {}
+						}
+					}
+
+					// Terapkan varian B jika terpilih
+					if (variant === 'B') {
+						document.querySelectorAll('[data-variant-a]').forEach(function(el) {
+							el.style.setProperty('display', 'none', 'important');
+						});
+						document.querySelectorAll('[data-variant-b]').forEach(function(el) {
+							const targetDisplay = el.getAttribute('data-display') || (el.tagName === 'SPAN' ? 'inline' : (el.tagName === 'A' ? 'inline-flex' : 'block'));
+							el.style.setProperty('display', targetDisplay, 'important');
+						});
+					}
+
+					// Laporkan varian aktif ke Google Tag Manager / Analytics
+					window.dataLayer = window.dataLayer || [];
+					window.dataLayer.push({
+						'event': 'ab_test_assignment',
+						'ab_variant': variant
+					});
+				}
+
+				if (document.readyState === 'loading') {
+					document.addEventListener('DOMContentLoaded', initABTesting);
+				} else {
+					initABTesting();
+				}
+			})();
+		</script>
 	</body>
 </html>

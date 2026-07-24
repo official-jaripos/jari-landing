@@ -10,6 +10,8 @@ import Features from '../components/sections/Features.astro';
 import Innovation from '../components/sections/Innovation.astro';
 import Pricing from '../components/sections/Pricing.astro';
 import AffiliateCTA from '../components/sections/AffiliateCTA.astro';
+
+const variant = Astro.url.searchParams.get('variant')?.toUpperCase() as 'A' | 'B' | undefined;
 ---
 
 <Layout 
@@ -26,7 +28,7 @@ import AffiliateCTA from '../components/sections/AffiliateCTA.astro';
         <div class="hero-light-wrapper">
             <div class="mesh-grid-light"></div>
             
-            <Hero />
+            <Hero variant={variant} />
         </div>
 
         <!-- Problem vs Solution Section -->
@@ -36,16 +38,16 @@ import AffiliateCTA from '../components/sections/AffiliateCTA.astro';
         <TargetMarket />
 
         <!-- Features Section with Glassmorphism -->
-        <Features />
+        <Features variant={variant} />
 
         <!-- Innovation & Roadmap Section -->
         <Innovation />
 
         <!-- Pricing Section -->
-        <Pricing />
+        <Pricing variant={variant} />
 
         <!-- Affiliate CTA Section -->
-        <AffiliateCTA />
+        <AffiliateCTA variant={variant} />
 
     </main>
 
