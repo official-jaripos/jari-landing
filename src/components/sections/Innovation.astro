@@ -27,7 +27,7 @@
                         </div>
                         <div>
                             <h4 class="text-lg font-bold text-slate-900">Chatbot Pintar (Tanya Jari AI)</h4>
-                            <p class="text-slate-500 max-w-sm mx-auto lg:mx-0">Tanya omzet harian, barang terlaris, atau tips bisnis lewat obrolan chat. Jari AI akan menjawab instan seperti konsultan pribadi Anda!</p>
+                            <p class="text-slate-500 max-w-sm mx-auto lg:mx-0">Cek omzet harian, produk terlaris, hingga analisis toko secara instan kapan saja langsung lewat obrolan chat.</p>
                         </div>
                     </div>
                     <!-- Feature 2: Rekomendasi Stok -->
@@ -36,58 +36,278 @@
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                         </div>
                         <div>
-                            <h4 class="text-lg font-bold text-slate-900">Rekomendasi Stok Pintar (AI Restock)</h4>
-                            <p class="text-slate-500 max-w-sm mx-auto lg:mx-0">AI kami otomatis menganalisis pola penjualan Anda untuk memberi tahu kapan waktu belanja stok terbaik dan barang apa saja yang harus di-restock agar jualan tetap lancar.</p>
+                            <h4 class="text-lg font-bold text-slate-900">Rekomendasi Stok Pintar</h4>
+                            <p class="text-slate-500 max-w-sm mx-auto lg:mx-0">Dapatkan rekomendasi jumlah re-stok barang yang disarankan secara otomatis berdasarkan tren penjualan toko Anda.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Right: Features Roadmap for UMKM -->
-            <div data-aos="fade-left" class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-slate-100 relative">
-                <div class="absolute -top-4 -right-4 w-24 h-24 bg-brand-500/10 rounded-full blur-2xl"></div>
-                
-                <h3 class="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-                    <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-                    Rencana Pengembangan Fitur
-                </h3>
+            <!-- Right: Direct AI Carousel Showcase Without Parent Card -->
+            <div data-aos="fade-left" class="relative">
+                <!-- Background Accent Glow -->
+                <div class="absolute -top-6 -right-6 w-32 h-32 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-                <div class="space-y-8">
-                    <!-- Step 1 -->
-                    <div class="relative pl-10 border-l-2 border-brand-100 pb-2">
-                        <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-brand-500 border-4 border-white shadow-sm"></div>
-                        <div class="flex items-center gap-2 mb-1">
-                             <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2 py-0.5 rounded uppercase">Sudah Tersedia</span>
+                <!-- Carousel Content Slides Wrapper -->
+                <div id="ai-carousel-slides" class="relative h-[430px]">
+
+                    <!-- SLIDE 1: CHATBOT JARI AI -->
+                    <div id="slide-0" class="slide-item absolute inset-0 w-full h-full transition-all duration-700 ease-out opacity-100 scale-100 pointer-events-auto">
+                        <!-- Chat Interface Box -->
+                        <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xl overflow-hidden flex flex-col justify-between h-full">
+                            
+                            <!-- Chat Top Bar -->
+                            <div class="px-4 py-3 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <img src="/assets/images/jari-ai-logo.png" alt="Jari AI Logo" class="w-9 h-9 object-contain rounded-xl p-0.5 bg-gradient-to-tr from-brand-50 to-white border border-brand-100 shadow-sm" />
+                                    <div>
+                                        <h5 class="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+                                            Jari AI
+                                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                        </h5>
+                                        <p class="text-[11px] text-slate-500">Asisten Pintar Toko Anda</p>
+                                    </div>
+                                </div>
+                                <div class="hidden sm:flex items-center gap-2 bg-white px-2.5 py-1 rounded-lg border border-slate-200 text-xs text-slate-400">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                                    <span>Cari pesan...</span>
+                                </div>
+                            </div>
+
+                            <!-- Chat Bubble Area -->
+                            <div class="p-4 space-y-4 overflow-y-auto flex-1 bg-slate-50/30">
+                                
+                                <!-- Greeting AI Bubble -->
+                                <div class="flex items-start gap-2.5 max-w-[85%]">
+                                    <img src="/assets/images/jari-ai-logo.png" alt="Jari AI Avatar" class="w-7 h-7 object-contain rounded-lg flex-shrink-0 mt-0.5 border border-brand-100 bg-white p-0.5 shadow-xs" />
+                                    <div class="bg-white p-3 rounded-2xl rounded-tl-xs border border-slate-200/80 shadow-xs text-xs text-slate-700 leading-relaxed">
+                                        Halo! Saya Jari AI. Ada yang bisa saya bantu terkait transaksi dan analisis toko Anda hari ini?
+                                    </div>
+                                </div>
+
+                                <!-- User Question Bubble (Exact User Requirement) -->
+                                <div class="flex items-end justify-end">
+                                    <div class="bg-brand-600 text-white p-3.5 rounded-2xl rounded-tr-xs shadow-md shadow-brand-600/20 max-w-[82%] text-xs sm:text-sm font-medium leading-snug">
+                                        Jari, berapa omzet toko hari ini?
+                                    </div>
+                                </div>
+
+                                <!-- Jari AI Answer Bubble (Exact User Requirement) -->
+                                <div class="flex items-start gap-2.5 max-w-[92%]">
+                                    <img src="/assets/images/jari-ai-logo.png" alt="Jari AI Avatar" class="w-7 h-7 object-contain rounded-lg flex-shrink-0 mt-0.5 border border-brand-100 bg-white p-0.5 shadow-xs" />
+                                    <div class="bg-white p-4 rounded-2xl rounded-tl-xs border border-slate-200/90 shadow-sm text-xs sm:text-sm text-slate-800 space-y-2.5">
+                                        <p class="font-semibold text-slate-900">
+                                            Omzet hari ini <span class="text-brand-600 font-bold">Rp 2.450.000</span> <span class="text-emerald-600 font-bold text-xs bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200/60">(Naik 15% dari kemarin! 📈)</span>.
+                                        </p>
+                                        
+                                        <div class="p-2.5 rounded-xl bg-amber-50/80 border border-amber-200/70 text-slate-700 text-xs flex items-center gap-2">
+                                            <span class="text-base">☕</span>
+                                            <span>Produk terlaris: <strong class="text-slate-900">Kopi Susu Gula Aren</strong> (<strong class="text-brand-600">48 cup</strong>).</span>
+                                        </div>
+
+                                        <div class="flex flex-wrap gap-1.5 pt-1">
+                                            <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[10px] font-semibold"># OmzetHarian</span>
+                                            <span class="px-2 py-0.5 rounded-md bg-brand-50 text-brand-600 text-[10px] font-semibold"># RekomendasiStok</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Chat Input Footer Bar -->
+                            <div class="p-3 bg-white border-t border-slate-100 flex items-center gap-2">
+                                <div class="flex-1 relative">
+                                    <input 
+                                        type="text" 
+                                        disabled 
+                                        value="Ketik pertanyaan Anda..." 
+                                        class="w-full pl-3 pr-12 py-2 text-xs text-slate-400 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none"
+                                    />
+                                    <span class="absolute right-3 top-2.5 text-[10px] text-slate-400">0/100</span>
+                                </div>
+                                <button disabled class="w-8 h-8 rounded-xl bg-brand-600 text-white flex items-center justify-center shadow-md shadow-brand-600/30">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                                </button>
+                            </div>
+
                         </div>
-                        <h5 class="font-bold text-slate-900">Asisten AI & Kasir Tetap Jalan Saat Offline</h5>
-                        <p class="text-sm text-slate-500 mt-1">Gunakan asisten AI interaktif dan teruskan penjualan kasir dengan aman bahkan ketika koneksi internet Anda sedang terputus.</p>
                     </div>
 
-                    <!-- Step 2 -->
-                    <div class="relative pl-10 border-l-2 border-brand-100 pb-2">
-                        <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-brand-200 border-4 border-white shadow-sm"></div>
-                        <div class="flex items-center gap-2 mb-1">
-                             <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded uppercase">Segera Hadir</span>
+                    <!-- SLIDE 2: REKOMENDASI STOK (AI RESTOCK) -->
+                    <div id="slide-1" class="slide-item absolute inset-0 w-full h-full transition-all duration-700 ease-out opacity-0 scale-95 pointer-events-none">
+                        <!-- Restock Dashboard Preview Box -->
+                        <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xl overflow-hidden flex flex-col justify-between h-full p-4 sm:p-5">
+                            
+                            <div>
+                                <!-- Header Card AI Restock -->
+                                <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                                    <div class="flex items-center gap-2.5">
+                                        <img src="/assets/images/jari-ai-logo.png" alt="Jari AI Logo" class="w-8 h-8 object-contain rounded-xl p-0.5 bg-gradient-to-tr from-brand-50 to-white border border-brand-100 shadow-sm" />
+                                        <div>
+                                            <h5 class="text-xs sm:text-sm font-bold text-slate-900">Jari AI Rekomendasi Stok</h5>
+                                            <p class="text-[11px] text-slate-500">Prediksi kuantitas belanja berdasar tren penjualan</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-[10px] font-bold text-brand-600 bg-brand-50 px-2 py-0.5 rounded-md border border-brand-200">Analisis 30 Hari</span>
+                                </div>
+
+                                <!-- Moving Status Progress Bar -->
+                                <div class="mt-4 bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <div class="flex items-center justify-between text-[11px] font-semibold text-slate-700 mb-2">
+                                        <span>Distribusi Moving Status</span>
+                                        <span class="text-slate-400 text-[10px]">40 Produk Dianalisis</span>
+                                    </div>
+                                    <!-- Multi-segmented Progress Bar -->
+                                    <div class="w-full h-2.5 rounded-full bg-slate-200 overflow-hidden flex">
+                                        <div class="bg-emerald-500 w-[0%]" title="Fast Moving"></div>
+                                        <div class="bg-amber-500 w-[25%]" title="Medium Moving"></div>
+                                        <div class="bg-orange-500 w-[55%]" title="Slow Moving"></div>
+                                        <div class="bg-red-500 w-[20%]" title="Dead Stock"></div>
+                                    </div>
+                                    <!-- Status Badges Grid -->
+                                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 mt-2.5 text-[10px] text-slate-600">
+                                        <div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Fast: 0</div>
+                                        <div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-500"></span> Medium: 10</div>
+                                        <div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-orange-500"></span> Slow: 22</div>
+                                        <div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-red-500"></span> Dead: 8</div>
+                                    </div>
+                                </div>
+
+                                <!-- Table Preview Products -->
+                                <div class="mt-3 overflow-x-auto">
+                                    <table class="w-full text-left text-[11px]">
+                                        <thead>
+                                            <tr class="text-slate-400 border-b border-slate-100">
+                                                <th class="py-1.5 font-semibold">Produk</th>
+                                                <th class="py-1.5 font-semibold">Stok Saat Ini</th>
+                                                <th class="py-1.5 font-semibold text-center">Rekomendasi AI</th>
+                                                <th class="py-1.5 font-semibold text-right">Estimasi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-slate-100">
+                                            <tr>
+                                                <td class="py-2 font-medium text-slate-800">
+                                                    Lampu LED Akuarium
+                                                    <span class="block text-[9px] text-amber-600 font-bold uppercase">Medium</span>
+                                                </td>
+                                                <td class="py-2 text-slate-600">283 pcs <span class="text-[9px] text-slate-400 block">(Terjual 24)</span></td>
+                                                <td class="py-2 text-center">
+                                                    <span class="px-2 py-0.5 bg-brand-50 text-brand-600 font-bold rounded border border-brand-200">24 pcs</span>
+                                                </td>
+                                                <td class="py-2 text-right font-bold text-slate-900">Rp 5.401.440</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-2 font-medium text-slate-800">
+                                                    Vitamin Burung 15ml
+                                                    <span class="block text-[9px] text-amber-600 font-bold uppercase">Medium</span>
+                                                </td>
+                                                <td class="py-2 text-slate-600">280 pcs <span class="text-[9px] text-slate-400 block">(Terjual 30)</span></td>
+                                                <td class="py-2 text-center">
+                                                    <span class="px-2 py-0.5 bg-brand-50 text-brand-600 font-bold rounded border border-brand-200">12 pcs</span>
+                                                </td>
+                                                <td class="py-2 text-right font-bold text-slate-900">Rp 1.995.552</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons Row -->
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-end gap-2">
+                                <button class="px-3 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl text-xs font-bold shadow-sm flex items-center gap-1 transition-all">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"></path></svg>
+                                    Buat Draft PO
+                                </button>
+                                <button class="px-3 py-1.5 bg-brand-600 hover:bg-brand-700 text-white rounded-xl text-xs font-bold shadow-sm flex items-center gap-1 transition-all">
+                                    Simpan Analisis
+                                </button>
+                            </div>
+
                         </div>
-                        <h5 class="font-bold text-slate-900">Pantau Banyak Cabang Toko & Kelola Karyawan</h5>
-                        <p class="text-sm text-slate-500 mt-1">Atur wewenang staf kasir Anda dengan mudah dan awasi performa penjualan semua cabang toko Anda langsung dari satu aplikasi.</p>
                     </div>
 
-                    <!-- Step 3 -->
-                    <div class="relative pl-10">
-                        <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-slate-200 border-4 border-white shadow-sm"></div>
-                         <div class="flex items-center gap-2 mb-1">
-                             <span class="text-xs font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded uppercase">Rencana Masa Depan</span>
-                        </div>
-                        <h5 class="font-bold text-slate-900">Khusus Bisnis Jasa (Laundry, Sewa, & Berat)</h5>
-                        <p class="text-sm text-slate-500 mt-1">Dukungan khusus untuk menghitung harga berdasarkan timbangan kiloan, sewa barang (rental), atau layanan jasa dengan perhitungan durasi.</p>
-                    </div>
                 </div>
 
-                <div class="mt-10 pt-8 border-t border-slate-100">
-                    <p class="text-slate-500 text-sm italic">"Kami terus berinovasi untuk membantu Anda mengatur bisnis dengan lebih mudah."</p>
+                <!-- Centered Tab Selector Buttons Directly Underneath Image -->
+                <div class="mt-5 flex justify-center">
+                    <div class="inline-flex bg-slate-900 p-1.5 rounded-2xl shadow-xl gap-1 border border-slate-800">
+                        <button 
+                            id="tab-chatbot" 
+                            onclick="switchAiSlide(0)"
+                            class="px-4 py-2 rounded-xl text-xs font-bold transition-all duration-300 flex items-center gap-2 text-white bg-brand-600 shadow-sm"
+                        >
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                            Chatbot AI
+                        </button>
+                        <button 
+                            id="tab-restock" 
+                            onclick="switchAiSlide(1)"
+                            class="px-4 py-2 rounded-xl text-xs font-medium transition-all duration-300 flex items-center gap-2 text-slate-400 hover:text-white hover:bg-slate-800"
+                        >
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                            Rekomendasi Stok
+                        </button>
+                    </div>
                 </div>
             </div>
+
+            <!-- Client Script for Carousel Switcher -->
+            <script is:inline>
+                let currentAiSlide = 0;
+                const totalAiSlides = 2;
+                let aiSlideInterval;
+
+                function switchAiSlide(index) {
+                    currentAiSlide = index;
+                    for (let i = 0; i < totalAiSlides; i++) {
+                        const slide = document.getElementById(`slide-${i}`);
+                        if (slide) {
+                            if (i === index) {
+                                slide.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+                                slide.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
+                            } else {
+                                slide.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
+                                slide.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+                            }
+                        }
+                    }
+
+                    // Update Tab Selector Button Styles
+                    const tabChatbot = document.getElementById('tab-chatbot');
+                    const tabRestock = document.getElementById('tab-restock');
+
+                    if (index === 0) {
+                        tabChatbot?.classList.add('bg-brand-600', 'text-white', 'font-bold', 'shadow-sm');
+                        tabChatbot?.classList.remove('text-slate-400', 'font-medium');
+                        tabRestock?.classList.remove('bg-brand-600', 'text-white', 'font-bold', 'shadow-sm');
+                        tabRestock?.classList.add('text-slate-400', 'font-medium');
+                    } else {
+                        tabRestock?.classList.add('bg-brand-600', 'text-white', 'font-bold', 'shadow-sm');
+                        tabRestock?.classList.remove('text-slate-400', 'font-medium');
+                        tabChatbot?.classList.remove('bg-brand-600', 'text-white', 'font-bold', 'shadow-sm');
+                        tabChatbot?.classList.add('text-slate-400', 'font-medium');
+                    }
+
+                    resetAiSlideTimer();
+                }
+
+                function nextAiSlide() {
+                    const next = (currentAiSlide + 1) % totalAiSlides;
+                    switchAiSlide(next);
+                }
+
+                function resetAiSlideTimer() {
+                    clearInterval(aiSlideInterval);
+                    aiSlideInterval = setInterval(nextAiSlide, 6000);
+                }
+
+                // Auto slide on load
+                if (typeof window !== 'undefined') {
+                    document.addEventListener('DOMContentLoaded', () => {
+                        resetAiSlideTimer();
+                    });
+                }
+            </script>
         </div>
     </div>
 </section>

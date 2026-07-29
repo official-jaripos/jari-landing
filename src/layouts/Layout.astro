@@ -166,17 +166,8 @@ const {
 		</script>
 		<!-- End Schema.org Structured Data -->
 		
-		<!-- PWA Meta Tags -->
+		<!-- App Favicon & Theme -->
 		<meta name="theme-color" content="#0ea5e9">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<meta name="apple-mobile-web-app-title" content="Jaripos">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="application-name" content="Jaripos">
-		<meta name="msapplication-TileColor" content="#0ea5e9">
-		
-		<!-- PWA Manifest & Icons -->
-		<link rel="manifest" href="/manifest.json">
 		<link rel="shortcut icon" href="/FAV-JARI-BLACK.png">
 		<link rel="apple-touch-icon" href="/FAV-JARI-BLACK.png">
 		
@@ -194,14 +185,7 @@ const {
 		<link rel="preload" as="style" href="/assets/css/aos.css" onload="this.onload=null;this.rel='stylesheet'">
 		<noscript><link href="/assets/css/aos.css" rel="stylesheet"></noscript>
 
-		<script is:inline>
-			// Check if running as PWA (standalone mode)
-			if (window.matchMedia('(display-mode: standalone)').matches || 
-				window.navigator.standalone === true) {
-				// Redirect to login page when opened as PWA
-				window.location.replace('/login');
-			}
-		</script>
+
 
 		<!-- Load jQuery first so that page-specific inline scripts can use $ safely -->
 		<script is:inline src="/assets/js/jquery.js"></script>
