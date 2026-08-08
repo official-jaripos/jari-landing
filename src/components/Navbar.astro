@@ -1,8 +1,10 @@
 ---
+import { promoKemerdekaan } from '../data/promo';
 interface Props {
     isAffiliatePage?: boolean;
 }
 const { isAffiliatePage = false } = Astro.props;
+const isActive = promoKemerdekaan.isActive;
 ---
 {!isAffiliatePage && (
 <!-- Affiliate Announcement Banner -->

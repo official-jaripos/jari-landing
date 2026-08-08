@@ -1,0 +1,39 @@
+---
+// src/components/promo/PromoBanner.astro
+import { promoKemerdekaan } from '../../data/promo';
+
+const isActive = promoKemerdekaan.isActive;
+const { title, scarcityText, fakeProgressPercentage } = promoKemerdekaan;
+---
+
+{isActive && (
+  <div class="bg-[#8B0000] text-white w-full py-4 px-6 border-b border-red-950 font-sans tracking-tight relative z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      {/* Promo Title & Urgency */}
+      <div class="flex flex-col items-start gap-1">
+        <h2 class="text-xl font-bold uppercase tracking-widest text-red-50">
+          {title}
+        </h2>
+        <p class="text-sm text-red-200 font-medium">
+          {scarcityText}
+        </p>
+      </div>
+
+      {/* Fake Progress Bar */}
+      <div class="w-full md:w-64 flex flex-col gap-2">
+        <div class="flex justify-between text-xs font-semibold text-red-100 uppercase tracking-wider">
+          <span>Kapasitas Terisi</span>
+          <span>{fakeProgressPercentage}%</span>
+        </div>
+        <div class="w-full h-1.5 bg-red-950/50 rounded-full overflow-hidden">
+          <div 
+            class="h-full bg-white rounded-full transition-all duration-1000 ease-out"
+            style={`width: ${fakeProgressPercentage}%`}
+          ></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+)}

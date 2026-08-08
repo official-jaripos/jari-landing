@@ -1,5 +1,8 @@
 ---
 import '../styles/global.css';
+import FallingFlags from '../components/promo/FallingFlags.astro';
+import PromoModal from '../components/promo/PromoModal.astro';
+
 
 interface Props {
 	title: string;
@@ -197,6 +200,9 @@ const {
 			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		)}
 		<!-- End Google Tag Manager (noscript) -->
+
+		<FallingFlags />
+		<PromoModal />
 
 		<slot />
 		
