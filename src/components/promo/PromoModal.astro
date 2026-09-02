@@ -1,40 +1,41 @@
 ---
-import { promoKemerdekaan } from '../../data/promo';
+import { promoSeptemberCuan } from '../../data/promo';
 
-const isActive = promoKemerdekaan.isActive;
-const { title, scarcityText, fakeProgressPercentage } = promoKemerdekaan;
+const isActive = promoSeptemberCuan.isActive;
+const { title, scarcityText, fakeProgressPercentage } = promoSeptemberCuan;
 ---
 
 {isActive && (
   <div id="promo-modal-backdrop" class="fixed inset-0 z-[100] bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
     
-    <div id="promo-modal-card" class="bg-white w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300 relative">
+    <div id="promo-modal-card" class="bg-white w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300 relative border border-emerald-900/10">
       
       {/* Close Button */}
-      <button id="close-promo-modal" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-white/20 hover:bg-white/40 text-white rounded-full transition z-10">
+      <button id="close-promo-modal" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-white/15 hover:bg-white/30 text-white rounded-full transition z-10" aria-label="Tutup modal">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
       </button>
 
-      {/* Header Area (Red) */}
-      <div class="bg-gradient-to-br from-[#8B0000] to-[#600000] p-8 text-center relative overflow-hidden">
-        {/* Subtle pattern or glow could go here */}
-        <div class="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+      {/* Header Area (Emerald Green & Gold) */}
+      <div class="bg-gradient-to-br from-[#064e3b] via-[#047857] to-[#022c22] p-8 text-center relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-36 h-36 bg-amber-400/15 rounded-full blur-2xl"></div>
+        <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-emerald-400/10 rounded-full blur-xl"></div>
         
-        <span class="inline-block px-3 py-1 bg-white/20 text-red-100 text-[10px] font-bold tracking-widest uppercase rounded-full mb-3 border border-white/20">
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 bg-amber-400/20 text-amber-200 text-[11px] font-bold tracking-widest uppercase rounded-full mb-3 border border-amber-300/30">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-300 animate-pulse"></span>
           Penawaran Terbatas
         </span>
         <h2 class="text-3xl md:text-4xl font-black font-display text-white tracking-tight leading-tight mb-2">
           {title}
         </h2>
-        <p class="text-red-100 font-medium text-sm">
-          Untuk Pengguna Baru!
+        <p class="text-emerald-100 font-medium text-sm">
+          Waktunya Usaha Makin Cuan dengan JARIPOS!
         </p>
       </div>
 
       {/* Body Area */}
       <div class="p-8 text-center flex flex-col items-center">
         
-        <p class="text-slate-700 font-bold text-lg mb-4">
+        <p class="text-slate-800 font-bold text-lg mb-4">
           {scarcityText}
         </p>
 
@@ -42,18 +43,19 @@ const { title, scarcityText, fakeProgressPercentage } = promoKemerdekaan;
         <div class="w-full max-w-xs flex flex-col gap-2 mb-8">
           <div class="flex justify-between text-xs font-bold text-slate-500 uppercase tracking-wider">
             <span>Kapasitas Terisi</span>
-            <span class="text-[#8B0000]">{fakeProgressPercentage}%</span>
+            <span class="text-emerald-700 font-extrabold">{fakeProgressPercentage}%</span>
           </div>
           <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden shadow-inner">
             <div 
-              class="h-full bg-[#8B0000] rounded-full transition-all duration-1000 ease-out"
+              class="h-full bg-gradient-to-r from-emerald-600 to-amber-500 rounded-full transition-all duration-1000 ease-out"
               style={`width: ${fakeProgressPercentage}%`}
             ></div>
           </div>
         </div>
 
-        <a href="https://app.jaripos.com/register" id="claim-promo-btn" class="w-full py-4 rounded-xl bg-[#8B0000] hover:bg-[#600000] active:scale-95 text-white font-black text-lg shadow-lg transition-all duration-300">
-          Klaim Promo Sekarang
+        <a href="https://app.jaripos.com/register" id="claim-promo-btn" class="w-full py-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-black text-lg shadow-lg shadow-emerald-900/20 transition-all duration-300 flex items-center justify-center gap-2">
+          <span>Klaim Promo September Cuan</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
         </a>
 
       </div>
