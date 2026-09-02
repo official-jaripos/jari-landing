@@ -1,7 +1,12 @@
-export const promoKemerdekaan = {
+export const promoSeptemberCuan = {
   isActive: true, // Ubah ke false untuk mematikan promo
-  title: "MERDEKA SALE 50%",
-  validUntil: "2026-08-24T23:59:59",
+  title: "SEPTEMBER CUAN 50%",
+  validUntil: "2026-09-30T23:59:59",
   scarcityText: "Terbatas! Hanya untuk 100 Pendaftar Pertama",
-  fakeProgressPercentage: 78,
+  fakeProgressPercentage: 68,
 };
+
+// Aliases for compatibility
+export const currentPromo = promoSeptemberCuan;
+export const promoKemerdekaan = promoSeptemberCuan;
+
