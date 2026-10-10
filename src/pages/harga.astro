@@ -41,7 +41,9 @@ const highlightedPackage = pricingData.find(p => p.isHighlighted) || pricingData
                 <div class="max-w-5xl mx-auto">
                     <!-- Focused Premium Plan Card -->
                     <div class="bg-white border-2 border-[#1f5aa2] rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row gap-10 md:gap-16 shadow-2xl relative overflow-hidden group items-center">
-                        <div class="absolute top-0 right-8 bg-[#1f5aa2] text-white text-xs font-black uppercase tracking-widest px-6 py-2 rounded-b-xl shadow-md z-20">DISKON 50%</div>
+                        {isActive && (
+                            <div class="absolute top-0 right-8 bg-[#1f5aa2] text-white text-xs font-black uppercase tracking-widest px-6 py-2 rounded-b-xl shadow-md z-20">DISKON 50%</div>
+                        )}
                         
                         <!-- Info Kiri -->
                         <div class="flex-1 w-full relative z-10">
